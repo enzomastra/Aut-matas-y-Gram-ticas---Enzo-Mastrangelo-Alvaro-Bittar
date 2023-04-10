@@ -1,26 +1,19 @@
 def solve(string):
     sumate=[]
-    nums=string.split()
+    nums=string.split("+")
     result=0
 
-    if nums[1]!="*":
-        result=nums[0]
-        sumate.append(int(result))
-
-    for i in range(len(nums)):
-        if nums[i]=="*":
-            result=int(nums[i - 1])*int(nums[i + 1])
-            sumate.append(int(result))
-
-        elif nums[i]=="+":
-            if i+2< len(nums) and nums[i+2]=="*":
-                pass
-            else:
-                result=nums[i+1]
-                sumate.append(int(result))
-
+    for term in nums:
+        if "*" in term:
+            operation=term.split("*")
+            product=1
+            for num in operation:
+                product*= int(num)
+            sumate.append(product)
+        else:
+            sumate.append(int(term))
     print(sum(sumate))
 
 
-string = "2 + 7 * 2 + 1"
+string = "2 * 5 + 2 * 2 + 5"
 resultado = solve(string)
