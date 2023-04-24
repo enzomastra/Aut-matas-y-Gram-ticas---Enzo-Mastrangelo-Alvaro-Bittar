@@ -1,0 +1,16 @@
+Autómata finito determinista
+
+Ahora es el momento de presentar el concepto formal de autómata finito, con el fin de precisar algunos de los argumentos y descripciones informales que hemos visto en las Secciones 1.1.1 y 2.1. Comenzamos con el 38 Introducción a la teoría de autómatas, lenguajes y computación formalismo de un autómata finito determinista, que es aquel que sólo puede estar en un único estado después de leer cualquier secuencia de entradas. El término “determinista” hace referencia al hecho de que para cada entrada sólo existe uno y sólo un estado al que el autómata puede hacer la transición a partir de su estado actual.
+Por el contrario, un autómata finito “no determinista”, que veremos en la Sección 2.3, puede estar en varios estados a la vez. El término “autómata finito” hace referencia a la variedad determinista, aunque normalmente utilizaremos el término “determinista” o la abreviatura AFD, con el fin de recordar al lector el tipo de autómata del que estamos hablando.
+
+Definición de autómata finito determinista
+
+Un autómata finito determinista consta de:
+1. Un conjunto finito de estados, a menudo designado como Q.
+2. Un conjunto finito de símbolos de entrada, a menudo designado como Σ.
+3. Una función de transición que toma como argumentos un estado y un símbolo de entrada y devuelve un estado. La función de transición se designa habitualmente como δ En nuestra representación gráfica informal del autómata, δ se ha representa mediante arcos entre los estados y las etiquetas sobre los arcos.
+Si q es un estado y a es un símbolo de entrada, entonces δ (q,a) es el estado p tal que existe un arco etiquetado a que va desde q hasta p.2
+4. Un estado inicial, uno de los estados de Q.
+5. Un conjunto de estados finales o de aceptación F. El conjunto F es un subconjunto de Q. A menudo haremos referencia a un autómata finito determinista mediante su acrónimo: AFD. La representación más sucinta de un AFD consiste en un listado de los cinco componentes anteriores. Normalmente, en las demostraciones, definiremos un AFD utilizando la notación de “quíntupla” siguiente:
+A = (Q, Σ,δ ,q0,F)
+donde A es el nombre del AFD, Q es su conjunto de estados, Σ son los símbolos de entrada, δ es la función de transición, q0 es el estado inicial y F es el conjunto de estados finales.

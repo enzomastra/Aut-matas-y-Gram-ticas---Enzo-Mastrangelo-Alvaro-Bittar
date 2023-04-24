@@ -1,0 +1,6 @@
+youtube
+youtube.com
+ww.youtube.com
+hht://youtube.com
+https://youtube.com
+http://youtube.com/search
